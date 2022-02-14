@@ -75,7 +75,7 @@ class BookInStock
     attr_accessor :price, :isbn
   
   def initialize(isbn,price)
-    if isbn.size ==0 or price < 0
+    if isbn.size ==0 or price <= 0
       raise ArgumentError, "Input not correct"
     end
     @price = price
